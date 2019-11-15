@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
+import Homepage from './components/Homepage/Homepage';
+import Competitions from './components/Competitions/Competitions';
+import CompetitionCard from './components/Competitions/CompetitionCard/CompetitionCard';
+require('dotenv').config();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='App'>
+        <NavBar />
+        <Switch>
+          <Route path='/competitions/:compID' component={CompetitionCard} />
+          <Route path='/competitions' exact component={Competitions} />
+          <Route path='/' exact component={Homepage} />
+          <Redirect to='/' />
+        </Switch>
+        <Footer />
+      </div>
+    </>
   );
 }
 

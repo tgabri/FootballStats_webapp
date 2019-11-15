@@ -1,0 +1,45 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar ul {
+  margin-top: 30px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.navbar ul li {
+  font-weight: bold;
+  height: 60px;
+  border: 0.1px solid #ccc;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    background: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    border: none;
+  }
+  .nav-link {
+    color: white;
+  }
+}
