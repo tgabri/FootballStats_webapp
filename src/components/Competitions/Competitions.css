@@ -1,0 +1,25 @@
+.competitions-container {
+  margin: 0 auto;
+}
+
+.competitions-wrapper .card-title {
+  color: black;
+  font-family: 'Kulim Park', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #ccc;
+}
+
+.competitions-wrapper .card .card-title {
+  background-color: #ccc;
+  color: black;
+  text-decoration: none;
+  font-family: 'Kulim Park', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.competitions-wrapper .card a {
+  color: white;
+  text-decoration: none;
+}

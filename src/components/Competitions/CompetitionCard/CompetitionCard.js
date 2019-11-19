@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Row, Col } from 'reactstrap';
 
-export default class CompetitionCard extends Component {
-  state = {
-    competition: null,
-    isLoading: true,
-    error: null
-  };
+import './CompetitionCard.css';
+import Tab from '../../../Reuseables/Tab/Tab';
 
-  componentDidMount() {}
-  render() {
-    console.log(this.props, '<<<<<CARD');
-    return <div className='competition-container'>Hello</div>;
-  }
+export default function CompetitionCard(props) {
+  return (
+    <div className='competition-container'>
+      <Row>
+        <Col>
+          <Tab id={props.match.params.id} />
+        </Col>
+      </Row>
+    </div>
+  );
 }

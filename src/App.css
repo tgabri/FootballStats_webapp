@@ -4,10 +4,13 @@
 }
 
 .App {
-  position: relative;
+  color: #ccc;
   background-color: #1d1d1d;
   text-align: center;
-  color: aliceblue;
   width: 100%;
+}
+
+.app-container {
+  margin-top: 56px;
   min-height: 100vh;
 }

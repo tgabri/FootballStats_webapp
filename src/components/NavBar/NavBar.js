@@ -17,8 +17,15 @@ export default function NavBar() {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar className='navbar-dark' light expand='md'>
-      <NavbarBrand href='/'>LOGO</NavbarBrand>
+    <Navbar
+      color='dark'
+      className='navbar-dark navbar-fixed-top'
+      light
+      expand='md'
+    >
+      <NavbarBrand href='/'>
+        <img src='/img/ball.png' />
+      </NavbarBrand>
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav navbar>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardTitle } from 'reactstrap';
+import { Card, CardTitle, CardSubtitle } from 'reactstrap';
 import { Link } from 'react-router-dom';
+
+import './Competitions.css';
 import { fetchCompetitions } from '../../api.js';
 
 export default class Competitions extends Component {
@@ -26,25 +28,32 @@ export default class Competitions extends Component {
     const { isLoading, competitions, error } = this.state;
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Ooops...</p>;
+    let filteredCompetitions = [];
     return (
       <div className='competitions-container'>
-        {competitions.map(
-          comp => (
-            console.log(comp),
-            (
-              <div className='competitions-wrapper' key={comp.id}>
-                <Link to={`/competitions/${comp.id}`}>
-                  {' '}
-                  <Card color='dark' body>
-                    <CardTitle>
-                      {comp.area.name} - {comp.name}
-                    </CardTitle>
-                  </Card>
-                </Link>
-              </div>
-            )
-          )
-        )}
+        {competitions.map(comp => (
+          <div className='competitions-wrapper' key={comp.id}>
+            {' '}
+            <CardTitle>
+              <Link to={`/areas/${comp.area.id}`}>
+                {!filteredCompetitions.includes(comp.area.name) &&
+                  comp.area.name}
+              </Link>
+            </CardTitle>
+            <Card
+              color='dark'
+              style={{
+                width: '100%'
+              }}
+              body
+            >
+              <Link to={`/competitions/${comp.id}`}>
+                <CardSubtitle> {comp.name}</CardSubtitle>
+              </Link>
+            </Card>
+            {!filteredCompetitions.push(comp.area.name)}
+          </div>
+        ))}
       </div>
     );
   }

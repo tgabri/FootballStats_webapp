@@ -1,0 +1,12 @@
+.teams-wrapper .card {
+}
+
+.teams-wrapper .card:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.teams-wrapper .card-title {
+  color: white;
+  text-decoration: none;
+}

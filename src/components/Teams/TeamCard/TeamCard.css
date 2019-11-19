@@ -1,20 +1,20 @@
-.competition-container {
+.team-container {
   width: 100%;
 }
 
-.competition-container .row {
+.team-container .row {
   width: 100%;
   display: block;
   margin: 0 auto;
 }
 
-.competition-container .col {
+.team-container .col {
   padding: 0;
   margin: 0;
   text-align: justify;
 }
 
-#compcard-title {
+#teamcard-title {
   text-align: center;
   border: none;
   width: 100%;
@@ -23,35 +23,30 @@
   text-transform: uppercase;
   font-weight: bold;
 }
-#compcard-title a {
-  color: white;
-  text-decoration: none;
-}
 
-#compcard-body {
-  text-align: center;
-}
-
-#compcard-table {
+#teamcard-table {
   width: 100%;
   background-color: #d3d3d3;
   text-align: center;
 }
 
-#compcard-table td {
-  border: none;
-  font-size: 16px;
-  font-family: 'Kulim Park', sans-serif;
-  font-weight: bold;
-}
-#compcard-table td a {
+#teamcard-table a {
   color: black;
   text-decoration: none;
 }
 
-#compcard-table th {
+#teamcard-table td {
   border: none;
   font-size: 16px;
   font-family: 'Kulim Park', sans-serif;
   font-weight: bold;
+  padding: 8px;
+}
+
+#teamcard-table th {
+  border: none;
+  font-size: 16px;
+  font-family: 'Kulim Park', sans-serif;
+  font-weight: bold;
+  padding: 8px;
 }
