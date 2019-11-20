@@ -18,7 +18,6 @@ export default class CompetitionCard extends Component {
   }
 
   getCompetition = () => {
-    console.log(this.props);
     const { id } = this.props.match.params;
 
     fetchCompetition(id)
@@ -35,7 +34,7 @@ export default class CompetitionCard extends Component {
       <div className='competition-container'>
         <Row>
           <Col>
-            <Tab />
+            <Tab id={this.props.match.params.id} />
           </Col>
         </Row>
         <Row id='competition-row'>

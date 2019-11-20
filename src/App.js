@@ -14,6 +14,9 @@ import PlayerCard from './components/PlayerCard/PlayerCard';
 import Matches from './components/Matches/Matches';
 import MatchCard from './components/Matches/MatchCard/MatchCard';
 import AreaCard from './components/AreaCard/AreaCard';
+import Standings from './components/Competitions/CompetitionCard/Standings/Standings';
+import Scorers from './components/Competitions/CompetitionCard/Scorers./Scorers';
+import CompetitionTeams from './components/Competitions/CompetitionCard/CompetitionTeams/CompetitionTeams';
 require('dotenv').config();
 
 function App() {
@@ -27,6 +30,17 @@ function App() {
               path='/competitions/:id/pastwinners'
               exact
               component={PastWinners}
+            />
+            <Route
+              path='/competitions/:id/standings'
+              exact
+              component={Standings}
+            />
+            <Route path='/competitions/:id/scorers' exact component={Scorers} />
+            <Route
+              path='/competitions/:id/teams'
+              exact
+              component={CompetitionTeams}
             />
             <Route path='/competitions/:id' exact component={CompetitionCard} />
             <Route path='/competitions' exact component={Competitions} />

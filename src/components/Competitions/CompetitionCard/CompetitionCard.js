@@ -3,6 +3,7 @@ import { Row, Col } from 'reactstrap';
 
 import './CompetitionCard.css';
 import Tab from '../../../Reuseables/Tab/Tab';
+import Standings from './Standings/Standings';
 
 export default function CompetitionCard(props) {
   return (

@@ -9,12 +9,16 @@ export default function Tab(props) {
     'teams',
     'matches'
   ]);
+
   return (
     <div className='tab-container'>
       <Nav tabs>
         {tabItems.map(tabItem => (
-          <NavItem>
-            <NavLink href={`/competitions/${props.id}/${tabItem}`}>
+          <NavItem key={tabItem}>
+            <NavLink
+              href={`/competitions/${props.id}/${tabItem}`}
+              path={tabItem}
+            >
               {tabItem.split(/(?=[A-Z])/).join(' ')}
             </NavLink>
           </NavItem>
